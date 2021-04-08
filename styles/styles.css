@@ -16,6 +16,11 @@
     align-items: center;
     flex-wrap: wrap;
     border-bottom: 1px solid rgb(236, 236, 236);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* background-color: rgb(249, 246, 255); */
+    background-color: white;
 }
 
 /* navigation bar left */
@@ -65,6 +70,7 @@ i {
     /* color: rgb(59, 59, 59); */
     color: rgb(87, 87, 87);
     transition: .2s;
+    font-weight: 500;
 }
 
 .navbar-right span:hover {
@@ -79,8 +85,10 @@ i {
     justify-content: space-evenly;
     align-items: center;
     height: 30rem;
-    background-color: rgb(249, 246, 255);
+    /* background-color: rgb(249, 246, 255); */
+    background-color: white;
     border-bottom: 1px solid rgb(236, 236, 236);
+    margin-top: 1rem;
 }
 
 .about-description h3 {
@@ -88,6 +96,7 @@ i {
     color: rgb(59, 59, 59);
     font-size: 2rem;
     font-weight: 300;
+    margin-top: 4rem;
 }
 
 .about-description .about-welcome {
@@ -141,39 +150,92 @@ i {
 
 /* results div */
 .results {
-    background-color: rgb(170, 134, 255);
-    height: 30rem;
+    /* background-color: rgb(170, 134, 255); */
+    background-color: rgb(252, 252, 252);
+    height: 31rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .results h3 {
-    color: white;
+    /* color: white; */
     font-family: 'Lexend', sans-serif;
     text-align: center;
     font-weight: 500;
+    color:rgb(59, 59, 59);
 }
 
 .results span {
     text-transform: uppercase;
     font-weight: 600;
     font-size: 3rem;
-}
-
-/* footer */
-
-/* .footer {
-    min-height: 6rem;
-    border-top: 1px solid rgb(236, 236, 236);
-    background-color: rgb(236, 236, 236);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    font-family: 'Lexend', sans-serif;
-}
-
-.footer p {
     color:rgb(170, 134, 255);
-} */
+}
+
+.footer {
+    min-height: 6rem;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Lexend', sans-serif;
+    border-top: 1px solid rgb(236, 236, 236);
+}
+
+.footer-title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color:rgb(170, 134, 255);
+    font-size: 1.5rem;
+}
+
+.footer-title span {
+    color:rgb(59, 59, 59);
+    font-weight: 300;
+}
+
+.footer-app {
+    letter-spacing: 2px;
+    font-weight: 500;
+    color:rgb(59, 59, 59);
+    font-size: 1rem;
+    margin-left: 30rem;
+}
+
+.footer-app span {
+    color: rgb(170, 134, 255);
+}
+
+/* dropdown */
+.dropdown {
+    position: absolute;
+    background-color: rgb(170, 134, 255);
+    width: 10rem;
+    margin-top: 1rem;
+    pointer-events: none;
+    opacity: 0;
+    transition: .2s;
+}
+
+.dropdown li {
+    padding: 1rem;
+    list-style-type: none;
+    text-align: center;
+    color:white;
+    cursor: pointer;
+    transition: .2s;
+    border: 1px solid rgb(178, 147, 248);
+}
+
+.dropdown li:hover {
+    background-color: white;
+    color: rgb(170, 134, 255);
+}
+
+.show-category:focus + .dropdown {
+    pointer-events: all;
+    opacity: 1;
+}
