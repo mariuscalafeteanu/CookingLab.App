@@ -215,9 +215,9 @@ i {
     background-color: rgb(170, 134, 255);
     width: 10rem;
     margin-top: 1rem;
-    pointer-events: none;
-    opacity: 0;
     transition: .2s;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .dropdown li {
@@ -233,9 +233,4 @@ i {
 .dropdown li:hover {
     background-color: white;
     color: rgb(170, 134, 255);
-}
-
-.show-category:focus + .dropdown {
-    pointer-events: all;
-    opacity: 1;
 }
