@@ -1,0 +1,95 @@
+/* navigation bar */
+/* rgb(160, 0, 253); */
+
+
+.navbar {
+    font-family: 'Lexend', sans-serif;
+    min-height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid rgb(236, 236, 236);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* background-color: rgb(249, 246, 255); */
+    background-color: white;
+
+    /* navigation bar left */
+    .navbar-left {
+    margin-left: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 75rem;
+    flex-wrap: wrap;
+        h1 {
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: 300;
+        color: rgb(170, 134, 255);
+        }
+        a {
+            text-decoration: none;
+            /* color: rgb(59, 59, 59); */
+            color: rgb(87, 87, 87);
+            font-weight: 500;
+            font-size: 1rem;
+            transition: .2s;
+            &:hover {
+                color: rgb(170, 134, 255);
+            }
+            i {
+                margin-left: .7rem;
+                font-size: 1.1rem;
+                color: rgb(170, 134, 255);
+            }
+        }
+        .categories {
+            .dropdown {
+                position: absolute;
+                background-color: rgb(170, 134, 255);
+                width: 10rem;
+                margin-top: 1rem;
+                transition: .2s;
+                opacity: 0;
+                pointer-events: none;
+                li {
+                    padding: 1rem;
+                    list-style-type: none;
+                    text-align: center;
+                    color:white;
+                    cursor: pointer;
+                    transition: .2s;
+                    border: 1px solid rgb(178, 147, 248);
+                    &:hover {
+                        background-color: white;
+                        color: rgb(170, 134, 255);
+                    }
+                }
+            }
+        }
+    }
+
+    /* navigation bar right */
+    .navbar-right {
+        margin-right: 4rem;
+        span {
+            font-size: 1rem;
+            cursor: pointer;
+            /* color: rgb(59, 59, 59); */
+            color: rgb(87, 87, 87);
+            transition: .2s;
+            font-weight: 500;
+            i {
+                margin-left: .7rem;
+                font-size: 1.1rem;
+                color: rgb(170, 134, 255);
+            }
+            &:hover {
+                color:rgb(170, 134, 255);
+            }
+        }
+    }
+}

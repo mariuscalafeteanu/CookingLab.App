@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//navbar section
+@import './_navbar';
+
+//about section
+@import './_about';
+
+//results section
+@import './_results';
+
+//footer section
+@import './_footer';
