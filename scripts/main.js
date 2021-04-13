@@ -4,6 +4,8 @@ const recipeOutput = document.querySelector('.recipe-output');
 const searchBtn = document.querySelector('.search-btn');
 const noResultMessage = document.querySelector('.no-results');
 const resultsContainer = document.querySelector('.results');
+const searchInput = document.querySelector('.search-input');
+const randomRecipe = document.querySelector('.random-recipe');
 
 // adding recipe categories on window load
 const getCategories = async () => {
@@ -84,9 +86,8 @@ dropDownContainer.addEventListener('click', addCategoryToResults);
 
 //showing recipes on search
 const searchRecipe = async () => {
-    const searchInput = document.querySelector('.search-input');
-    const keyWord = searchInput.value;
 
+    const keyWord = searchInput.value;
     deleteStyle();
 
     //fetching data
@@ -109,5 +110,48 @@ const searchRecipe = async () => {
         </div>`;
         }, 500)
     })
+    searchInput.value = '';
 }
+
+//search recipe on click
 searchBtn.addEventListener('click', searchRecipe);
+
+//search recipe on enter
+searchInput.addEventListener('keydown', e => {
+    if (e.keyCode === 13) {
+        searchRecipe();
+    }
+});
+
+
+
+//Random recipe
+
+const outputRandomRecipe = async () => {
+
+    deleteStyle();
+
+    //fetching random recipe
+    const randomRecipeFetch = await fetch(`https://www.themealdb.com/api/json/v1/1/random.php`);
+    const convertRandomRecipe = await randomRecipeFetch.json();
+    const randomMealRecipe = convertRandomRecipe.meals;
+
+    randomMealRecipe.forEach(recipe => {
+        setTimeout(() => {
+
+            recipeOutput.innerHTML +=
+            `<div class="recipe">
+            <div class="recipe-image">
+                <img height="100%" width="100%" src="${recipe.strMealThumb}"></img>
+            </div>
+            <div class="recipe-description">
+                <p class="recipe-category">${recipe.strCategory}</p>
+                <p class="recipe-name">${recipe.strMeal}</p>
+            </div>
+    </div>`;
+
+        }, 500)
+    })
+}
+
+randomRecipe.addEventListener('click', outputRandomRecipe);
