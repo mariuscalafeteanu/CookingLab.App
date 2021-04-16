@@ -1,0 +1,56 @@
+//responsiveness
+@media only screen and (max-width: 1024px) {
+
+    //search
+    .about .search .search-input {
+        width: 14rem;
+    }
+    .about .search .search-btn {
+        width: 5rem;
+    }
+
+    //about description
+    .about .about-description h3 {
+        margin-top: 0;
+    }
+
+    .about .about-description h3 .about-welcome {
+        font-size: 2rem;
+    }
+
+    .about .about-description h3 .about-msg {
+        font-size: .9rem;
+    }
+
+    //results
+    .results h3 span {
+        font-size: 1.5rem;
+    }
+
+    .results h3 {
+        font-size: 1rem;
+    }
+
+    .navbar  {
+        display: none;
+    }
+
+    //footer
+    .footer {
+        flex-direction: column;
+    }
+
+    .footer .footer-title {
+        font-size: 1rem;
+    }
+
+    .footer .footer-app {
+        margin: 0;
+        font-size: .8rem;
+    }
+
+    .footer .footer-app span {
+        font-size: .8rem;
+    }
+
+}
