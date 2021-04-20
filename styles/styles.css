@@ -125,6 +125,10 @@
   color: #aa86ff;
 }
 
+.navbar .navbar-right .mobile-categories {
+  display: none;
+}
+
 /* about section */
 /* rgb(160, 0, 253); */
 .about {
@@ -341,7 +345,42 @@
   color: #aa86ff;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 767px) {
+  .navbar .navbar-left {
+    margin-left: 0;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: .5rem;
+  }
+  .navbar .navbar-left h1 {
+    font-size: 2rem;
+  }
+  .navbar .navbar-left .categories, .random-recipe {
+    margin-top: .5rem;
+  }
+  .navbar .navbar-left .api-link, .github-link {
+    display: none;
+  }
+  .navbar .navbar-right span {
+    display: none;
+  }
+  .navbar .navbar-left .categories .dropdown {
+    right: 0;
+    margin-top: 2.2rem;
+    width: 100%;
+  }
+  .navbar .navbar-left .categories .dropdown li {
+    padding: .2rem;
+    font-size: 1rem;
+  }
   .about .search .search-input {
     width: 14rem;
   }
@@ -349,7 +388,7 @@
     width: 5rem;
   }
   .about .about-description h3 {
-    margin-top: 0;
+    margin-top: 2rem;
   }
   .about .about-description h3 .about-welcome {
     font-size: 2rem;
@@ -363,8 +402,13 @@
   .results h3 {
     font-size: 1rem;
   }
-  .navbar {
-    display: none;
+  .results .recipe-output {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .results .recipe-output .recipe {
+    margin-left: auto;
+    margin-right: auto;
   }
   .footer {
     -webkit-box-orient: vertical;

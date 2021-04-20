@@ -76,6 +76,8 @@ const addCategoryToResults = async e => {
                 </div>
         </div>`;
        }, 500);
+       dropDownContainer.style.opacity = '0';
+       dropDownContainer.style.pointerEvents = 'none';
     })
 
 }
