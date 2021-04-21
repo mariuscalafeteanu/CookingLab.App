@@ -85,7 +85,6 @@ dropDownContainer.addEventListener('click', addCategoryToResults);
 
 
 
-
 //showing recipes on search
 const searchRecipe = async () => {
 
@@ -115,6 +114,8 @@ const searchRecipe = async () => {
     searchInput.value = '';
 }
 
+
+
 //search recipe on click
 searchBtn.addEventListener('click', searchRecipe);
 
@@ -128,7 +129,6 @@ searchInput.addEventListener('keydown', e => {
 
 
 //Random recipe
-
 const outputRandomRecipe = async () => {
 
     deleteStyle();
@@ -140,7 +140,6 @@ const outputRandomRecipe = async () => {
 
     randomMealRecipe.forEach(recipe => {
         setTimeout(() => {
-
             recipeOutput.innerHTML +=
             `<div class="recipe">
             <div class="recipe-image">
@@ -151,9 +150,19 @@ const outputRandomRecipe = async () => {
                 <p class="recipe-name">${recipe.strMeal}</p>
             </div>
     </div>`;
-
         }, 500)
     })
 }
-
 randomRecipe.addEventListener('click', outputRandomRecipe);
+
+
+
+//Changing theme
+const changeThemeBtn = document.querySelector('.change-theme');
+
+const changeTheme = () => {
+    // localStorage.setItem('theme', document.body.classList);
+    document.body.classList.toggle('dark');
+    
+}
+changeThemeBtn.addEventListener('click', changeTheme);

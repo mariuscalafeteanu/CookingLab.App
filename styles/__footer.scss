@@ -2,32 +2,32 @@
 
 .footer {
     min-height: 6rem;
-    background-color: white;
+    background-color: var(--footer-bg);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
     font-family: 'Lexend', sans-serif;
-    border-top: 1px solid rgb(236, 236, 236);
+    border-top: 1px solid var(--footer-border);
     .footer-title {
         text-transform: uppercase;
         letter-spacing: 2px;
         font-weight: 500;
-        color:rgb(170, 134, 255);
+        color: var(--footer-title-color);
         font-size: 1.5rem;
         span {
-            color:rgb(59, 59, 59);
+            color:var(--footer-title-span);
             font-weight: 300;
         }
     }
     .footer-app {
         letter-spacing: 2px;
         font-weight: 500;
-        color:rgb(59, 59, 59);
+        color:var(--footer-app-color);
         font-size: 1rem;
         margin-left: 30rem;
         span {
-            color: rgb(170, 134, 255);
+            color: var(--footer-app-span);
         }
     }
 }

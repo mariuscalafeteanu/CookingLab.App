@@ -1,0 +1,69 @@
+:root {
+    //NAVBAR
+    --nav-bg: white;
+    --nav-border: rgb(236, 236, 236);
+    --nav-h1: rgb(170, 134, 255);
+    --nav-link-color: rgb(87, 87, 87);
+    --nav-link-color-hv: rgb(170, 134, 255);
+    --nav-icons-color: rgb(170, 134, 255);
+
+    //navbar dropdown
+    --nav-dropdown-bg: rgb(170, 134, 255);
+    
+    --nav-dropdown-li: white;
+
+    --nav-dropdown-li-border-hv: rgb(178, 147, 248);
+    --nav-dropdown-li-bg-hv: white;
+    --nav-dropdown-li-color-hv: rgb(170, 134, 255);
+
+    //navbar right
+    --nav-rg-color: rgb(87, 87, 87);
+    --nav-rg-color-hv: rgb(170, 134, 255);
+
+    --nav-rg-color-icon: rgb(170, 134, 255);
+
+
+    //ABOUT
+    --about-bg: white;
+    --about-border: rgb(236, 236, 236);
+    --about-h3-color: rgb(59, 59, 59);
+
+    --about-welcome-color: rgb(170, 134, 255);
+    
+    //about search
+    --search-input-bg: white;
+    --search-input-border: rgb(170, 134, 255, 0.418);
+    --search-input-border-fc: rgb(170, 134, 255);
+
+    --search-btn-bg: rgb(170, 134, 255);
+    --search-btn-color: white;
+    --search-btn-border: rgb(170, 134, 255);
+
+    --search-btn-color-hv: rgb(170, 134, 255);
+    --search-btn-bg-hv: white;
+
+
+    //RESULTS
+    --results-bg: rgb(255, 255, 255);
+    --results-h3-color: rgb(59, 59, 59);
+    --results-span-color: rgb(170, 134, 255);
+
+    --recipe-border: rgb(226, 226, 226);
+    --recipe-bg:white;
+
+    --recipe-description-color: rgb(194, 171, 247);
+    --recipe-category-color: white;
+    --recipe-name-color: white;
+
+    
+
+    //FOOTER
+    --footer-bg: white;
+    --footer-border: rgb(236, 236, 236);
+
+    --footer-title-color: rgb(170, 134, 255);
+    --footer-title-span: rgb(59, 59, 59);
+
+    --footer-app-color: rgb(59, 59, 59);
+    --footer-app-span: rgb(170, 134, 255);
+}

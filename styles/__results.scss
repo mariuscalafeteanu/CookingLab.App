@@ -1,22 +1,21 @@
 /* results div */
 .results {
     /* background-color: rgb(170, 134, 255); */
-    background-color: rgb(252, 252, 252);
+    background-color: var(--results-bg);
     min-height: 31rem;
     display: flex;
     justify-content: center;
     align-items: center; 
     h3 {
-        /* color: white; */
         font-family: 'Lexend', sans-serif;
         text-align: center;
         font-weight: 500;
-        color:rgb(59, 59, 59);
+        color: var(--results-h3-color);
         span {
             text-transform: uppercase;
             font-weight: 600;
             font-size: 3rem;
-            color:rgb(170, 134, 255);
+            color:var(--results-span-color);
         }
     }
     .recipe-output {
@@ -25,9 +24,9 @@
 
         /* ---- recipe template ---- */
         .recipe {
-            border: 1px solid rgb(226, 226, 226);
+            border: 1px solid var(--recipe-border);
             margin: 1rem 0rem 1rem 1rem;
-            background-color: white;
+            background-color: var(--recipe-bg);
             width: 15rem;
             min-height: 20rem;
             display: flex;
@@ -38,7 +37,7 @@
                 height: 70%;
             }
             .recipe-description {
-                background-color: rgb(194, 171, 247);
+                background-color: var(--recipe-description-color);
                 height: 30%;
                 display: flex;
                 flex-direction: column;
@@ -47,10 +46,10 @@
                 font-family: 'Lexend', sans-serif;
                 flex-wrap: wrap;
                 .recipe-category {
-                    color: white;
+                    color: var(--recipe-category-color);
                 }
                 .recipe-name {
-                    color: white;
+                    color: var(--recipe-name-color);
                     text-align: center;
                 }
             }

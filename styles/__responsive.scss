@@ -1,12 +1,19 @@
 //responsiveness
 @media only screen and (max-width: 767px) {
 
-    .navbar .navbar-left {
-        margin-left: 0;
-        justify-content: space-evenly;
-        display: flex;
+    .navbar {
         flex-direction: column;
-        margin-bottom: .5rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .navbar .navbar-left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
     }
 
     .navbar .navbar-left h1 {
@@ -21,9 +28,6 @@
     .navbar .navbar-left .api-link, .github-link {
         display: none;
     }
-    .navbar .navbar-right span {
-        display: none;
-    }
 
     .navbar .navbar-left .categories .dropdown {
         right: 0;
@@ -36,6 +40,14 @@
         font-size: 1rem;
     }
    
+    .navbar-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 3rem;
+        margin-left: 4rem;
+    }
+
     //search
 
     .about .search .search-input {
@@ -47,7 +59,7 @@
 
     //about description
     .about .about-description h3 {
-        margin-top: 2rem;
+        margin-top: 8rem;
     }
 
     .about .about-description h3 .about-welcome {

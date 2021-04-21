@@ -1,3 +1,5 @@
+@import './_variables';
+
 * {
     margin: 0;
     padding: 0;
@@ -16,4 +18,8 @@
 //footer section
 @import './_footer';
 
+//mobile responsiveness
 @import './_responsive';
+
+//golden black theme
+@import './_theme';
