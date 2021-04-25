@@ -37,14 +37,21 @@ showCategoryBtn.addEventListener('click', () => {
     }
 })
 
-
-
 // deleting "no result" style
 const deleteStyle = () => {
     noResultMessage.style.display = 'none';
     resultsContainer.style.display = 'block';
     resultsContainer.style.justifyContent = 'unset';
     resultsContainer.style.alignItems = 'unset';
+    recipeOutput.style.display = 'grid';
+    recipeOutput.innerHTML = '';
+}
+
+const addStyle = () => {
+    noResultMessage.style.display = 'block';
+    resultsContainer.style.display = 'flex';
+    resultsContainer.style.justifyContent = 'center';
+    resultsContainer.style.alignItems = 'center';
     recipeOutput.style.display = 'grid';
     recipeOutput.innerHTML = '';
 }
@@ -88,6 +95,11 @@ dropDownContainer.addEventListener('click', addCategoryToResults);
 //showing recipes on search
 const searchRecipe = async () => {
 
+    if (searchInput.value === '') {
+        addStyle();
+        return;
+    }
+
     const keyWord = searchInput.value;
     deleteStyle();
 
@@ -96,6 +108,7 @@ const searchRecipe = async () => {
     const recipeConverted = await recipeFetch.json();
     const recipes = await recipeConverted.meals;
 
+    
     // adding recipes on results
     recipes.forEach(recipe => {
         setTimeout(() => {
@@ -112,6 +125,7 @@ const searchRecipe = async () => {
         }, 500)
     })
     searchInput.value = '';
+    
 }
 
 
