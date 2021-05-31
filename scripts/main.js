@@ -57,7 +57,6 @@ const addStyle = () => {
 }
 
 
-
 //adding selected category to results
 const addCategoryToResults = async e => {
 
@@ -71,7 +70,6 @@ const addCategoryToResults = async e => {
     
     // adding recipes on results
     filteredCategories.forEach(recipe => {
-       setTimeout(() => {
         recipeOutput.innerHTML += 
         `<div class="recipe">
                 <div class="recipe-image">
@@ -82,14 +80,12 @@ const addCategoryToResults = async e => {
                     <p class="recipe-name">${recipe.strMeal}</p>
                 </div>
         </div>`;
-       }, 500);
        dropDownContainer.style.opacity = '0';
        dropDownContainer.style.pointerEvents = 'none';
     })
 
 }
 dropDownContainer.addEventListener('click', addCategoryToResults);
-
 
 
 //showing recipes on search
@@ -108,30 +104,54 @@ const searchRecipe = async () => {
     const recipeConverted = await recipeFetch.json();
     const recipes = await recipeConverted.meals;
 
-    
-    // adding recipes on results
     recipes.forEach(recipe => {
-        setTimeout(() => {
-            recipeOutput.innerHTML += 
-        `<div class="recipe">
-                <div class="recipe-image">
-                    <img height="100%" width="100%" src="${recipe.strMealThumb}"></img>
-                </div>
-                <div class="recipe-description">
-                    <p class="recipe-category">${recipe.strCategory}</p>
-                    <p class="recipe-name">${recipe.strMeal}</p>
-                </div>
-        </div>`;
-        }, 500)
+        
+        const recipeDiv = document.createElement('div');
+        recipeDiv.classList.add('recipe');
+
+        recipeDiv.innerHTML = 
+        `<div class="recipe-image">
+        <img height="100%" width="100%" src="${recipe.strMealThumb}"></img>
+    </div>
+    <div class="recipe-description">
+        <p class="recipe-category">${recipe.strCategory}</p>
+        <p class="recipe-name">${recipe.strMeal}</p>
+    </div>`;
+    recipeOutput.appendChild(recipeDiv);
+
+    recipeDiv.addEventListener('click', (e) => {
+        const recipeProfile = document.querySelector('.recipe-profile');
+        const recipeProfileName = document.querySelector('.profile-name');
+        const profileClose = document.querySelector('.profile-close');
+        const recipeProfileImage = document.querySelector('.profile-close');
+
+        const selectedItem = e.target.innerHTML;
+
+        profileClose.addEventListener('click', () => {
+            recipeProfile.style.display = 'none';
+        })
+
+        if (e.target.className !== 'recipe-name') {
+            return;
+        }
+
+        //fetching selected recipe to show details
+        fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${selectedItem}`)
+        .then(data => data.json())
+        .then(data => data.meals)
+        .then(data => {
+            recipeProfile.style.display = 'block';
+
+            recipeProfileName.innerText = 
+            `${data[0].strMeal} (${data[0].strCategory})`;
+        })
     })
-    searchInput.value = '';
-    
+})
 }
-
-
 
 //search recipe on click
 searchBtn.addEventListener('click', searchRecipe);
+
 
 //search recipe on enter
 searchInput.addEventListener('keydown', e => {
@@ -139,7 +159,6 @@ searchInput.addEventListener('keydown', e => {
         searchRecipe();
     }
 });
-
 
 
 //Random recipe
@@ -153,7 +172,6 @@ const outputRandomRecipe = async () => {
     const randomMealRecipe = convertRandomRecipe.meals;
 
     randomMealRecipe.forEach(recipe => {
-        setTimeout(() => {
             recipeOutput.innerHTML +=
             `<div class="recipe">
             <div class="recipe-image">
@@ -164,11 +182,9 @@ const outputRandomRecipe = async () => {
                 <p class="recipe-name">${recipe.strMeal}</p>
             </div>
     </div>`;
-        }, 500)
     })
 }
 randomRecipe.addEventListener('click', outputRandomRecipe);
-
 
 
 //Changing theme

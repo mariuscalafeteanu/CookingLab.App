@@ -1,0 +1,49 @@
+.recipe-profile {
+    background-color: white;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: none;
+
+    .profile-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 2.4rem;
+        background: rgb(170, 134, 255);
+
+        .profile-close { 
+            background: rgb(170, 134, 255);
+            color: #fff;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            width: 3rem;
+            height: 2.4rem;
+            position: absolute;
+            right: 0;
+        }
+
+        .profile-name {
+            color: white;
+            position: absolute;
+            left: 1rem;
+            font-family: 'Lexend', sans-serif;
+        }
+    }
+
+    .profile-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: space-between;
+        min-height: 2.4rem;
+        .profile-image {
+            height: 10rem;
+            background-color: grey;
+        }
+    }
+}
