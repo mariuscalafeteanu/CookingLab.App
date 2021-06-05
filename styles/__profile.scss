@@ -1,49 +1,36 @@
-.recipe-profile {
-    background-color: white;
+.black-bg {
+    background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     height: 100%;
     width: 100%;
     top: 0;
+    left: 0;
     z-index: 1000;
     display: none;
+    justify-content: center;
+    align-items: center;
+}
 
-    .profile-header{
+.recipe-profile {
+    background-color: white;
+    height: 50rem;
+    width: 60rem;
+    position: fixed;
+    border-radius: 1rem;
+    .recipe-name {
+        background-color: rgb(170, 134, 255);
+        height: 4rem;
+        color: white;
+        font-family: 'Lexend', sans-serif;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        min-height: 2.4rem;
-        background: rgb(170, 134, 255);
-
-        .profile-close { 
-            background: rgb(170, 134, 255);
-            color: #fff;
-            font-family: 'Helvetica', 'Arial', sans-serif;
-            font-size: 2rem;
-            font-weight: bold;
-            text-align: center;
-            width: 3rem;
-            height: 2.4rem;
-            position: absolute;
-            right: 0;
-        }
-
-        .profile-name {
-            color: white;
-            position: absolute;
-            left: 1rem;
-            font-family: 'Lexend', sans-serif;
-        }
-    }
-
-    .profile-body {
-        display: flex;
-        flex-direction: column;
         justify-content: center;
-        align-items: space-between;
-        min-height: 2.4rem;
-        .profile-image {
-            height: 10rem;
-            background-color: grey;
-        }
+        align-items: center;
+
+    }
+    .recipe-description {
+        color: rgb(87, 87, 87);
+        margin: 2rem 2rem 0rem 2rem;
+        font-family: 'Lexend', sans-serif;
     }
 }
+

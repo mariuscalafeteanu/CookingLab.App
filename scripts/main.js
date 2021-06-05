@@ -121,15 +121,18 @@ const searchRecipe = async () => {
 
     recipeDiv.addEventListener('click', (e) => {
         const recipeProfile = document.querySelector('.recipe-profile');
-        const recipeProfileName = document.querySelector('.profile-name');
-        const profileClose = document.querySelector('.profile-close');
-        const recipeProfileImage = document.querySelector('.profile-close');
+        const recipeName = document.querySelector('.recipe-name');
+        const recipeDescription = document.querySelector('.recipe-description');
+        const blackBg = document.querySelector('.black-bg');
 
         const selectedItem = e.target.innerHTML;
 
-        profileClose.addEventListener('click', () => {
-            recipeProfile.style.display = 'none';
-        })
+       
+
+        // profileClose.addEventListener('click', () => {
+        //     recipeProfile.style.display = 'none';
+        //     blackBg.style.display = 'none';
+        // })
 
         if (e.target.className !== 'recipe-name') {
             return;
@@ -140,10 +143,14 @@ const searchRecipe = async () => {
         .then(data => data.json())
         .then(data => data.meals)
         .then(data => {
+            blackBg.style.display = 'flex';
             recipeProfile.style.display = 'block';
 
-            recipeProfileName.innerText = 
+            recipeName.innerHTML = 
             `${data[0].strMeal} (${data[0].strCategory})`;
+
+            recipeDescription.innerHTML = 
+            `<p class="instructions-text">${data[0].strInstructions}</p>`;
         })
     })
 })
