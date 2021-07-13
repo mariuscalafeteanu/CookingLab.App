@@ -17,6 +17,16 @@
     width: 60rem;
     position: fixed;
     border-radius: 1rem;
+
+    .recipe-category {
+        color: rgb(87, 87, 87);
+        margin: 2rem 2rem 0rem 2rem;
+        font-family: 'Lexend', sans-serif;
+        // font-weight: bold;
+        .category-span {
+            color:rgb(170, 134, 255);
+        }
+    }
     .recipe-name {
         background-color: rgb(170, 134, 255);
         height: 4rem;
@@ -25,12 +35,37 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
 
     }
     .recipe-description {
         color: rgb(87, 87, 87);
         margin: 2rem 2rem 0rem 2rem;
         font-family: 'Lexend', sans-serif;
+    }
+
+    .recipe-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+            margin-top: 3rem;
+            text-decoration: none;
+            background-color: rgb(170, 134, 255);
+            color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            font-family: 'Lexend', sans-serif;
+            transition: .2s;
+            border: 2px solid transparent;
+            &:hover {
+                color:rgb(170, 134, 255);
+                background-color: transparent;
+                border: 2px solid rgb(170, 134, 255);
+                transition: .2s;
+            }
+        }
     }
 }
 

@@ -61,9 +61,9 @@ const showProfile = (e) => {
 
     const recipeProfile = document.querySelector('.recipe-profile');
 
-    const recipeName = document.querySelector('.recipe-name');
-    const recipeDescription = document.querySelector('.recipe-description');
-    const recipeYt = document.querySelector('.recipe-ingredients');
+    // const recipeName = document.querySelector('.recipe-name');
+    // const recipeDescription = document.querySelector('.recipe-description');
+    // const recipeCategory = document.querySelector('.recipe-category');
 
     const blackBg = document.querySelector('.black-bg');
     const selectedItem = e.target.innerHTML;
@@ -95,8 +95,12 @@ const showProfile = (e) => {
                     <p class="instructions-text">${data[0].strInstructions}</p>
                 </div>
 
-                <div class="recipe-ingredients">
-                    <a href="${data[0].strYoutube}">LINK</a>
+                <div class="recipe-category">
+                    <p>Category:<span class="category-span"> ${data[0].strCategory}</span></p>
+                </div>
+
+                <div class="recipe-link">
+                    <a href="${data[0].strYoutube}">Youtube Link</a>
                 </div>
             </div>`;
         })
