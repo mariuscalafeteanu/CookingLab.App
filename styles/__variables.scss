@@ -13,6 +13,7 @@
     --nav-dropdown-li: white;
 
     --nav-dropdown-li-border-hv: rgb(178, 147, 248);
+    --nav-dropdown-li-border: rgb(178, 147, 248);
     --nav-dropdown-li-bg-hv: white;
     --nav-dropdown-li-color-hv: rgb(170, 134, 255);
 
@@ -23,14 +24,14 @@
     --nav-rg-color-icon: rgb(170, 134, 255);
 
 
-    //ABOUT
+    //About
     --about-bg: white;
     --about-border: rgb(236, 236, 236);
     --about-h3-color: rgb(59, 59, 59);
 
     --about-welcome-color: rgb(170, 134, 255);
     
-    //about search
+    //About search
     --search-input-bg: white;
     --search-input-border: rgb(170, 134, 255, 0.418);
     --search-input-border-fc: rgb(170, 134, 255);
@@ -43,7 +44,7 @@
     --search-btn-bg-hv: white;
 
 
-    //RESULTS
+    //Results
     --results-bg: rgb(255, 255, 255);
     --results-h3-color: rgb(59, 59, 59);
     --results-span-color: rgb(170, 134, 255);
@@ -57,7 +58,7 @@
 
     
 
-    //FOOTER
+    //Footer
     --footer-bg: white;
     --footer-border: rgb(236, 236, 236);
 
@@ -66,4 +67,22 @@
 
     --footer-app-color: rgb(59, 59, 59);
     --footer-app-span: rgb(170, 134, 255);
+
+    //Recipe Profile
+    --recipe-profile-bg: white;
+
+    --recipe-profile-category-color: rgb(87, 87, 87);
+    --recipe-profile-category-span-color: rgb(170, 134, 255);
+
+    --recipe-profile-name-bg: rgb(170, 134, 255);
+    --recipe-profile-name-color: white;
+
+    --recipe-profile-description-color: rgb(87, 87, 87);
+
+    --recipe-profile-link-a-bg: rgb(170, 134, 255);
+
+    --recipe-profile-link-a-color: white;
+    --recipe-profile-link-a-color-hover: rgb(170, 134, 255);
+
+    --recipe-profile-link-a-border-color-hover: rgb(170, 134, 255);
 }

@@ -8,6 +8,7 @@
   --nav-dropdown-bg: rgb(170, 134, 255);
   --nav-dropdown-li: white;
   --nav-dropdown-li-border-hv: rgb(178, 147, 248);
+  --nav-dropdown-li-border: rgb(178, 147, 248);
   --nav-dropdown-li-bg-hv: white;
   --nav-dropdown-li-color-hv: rgb(170, 134, 255);
   --nav-rg-color: rgb(87, 87, 87);
@@ -39,6 +40,16 @@
   --footer-title-span: rgb(59, 59, 59);
   --footer-app-color: rgb(59, 59, 59);
   --footer-app-span: rgb(170, 134, 255);
+  --recipe-profile-bg: white;
+  --recipe-profile-category-color: rgb(87, 87, 87);
+  --recipe-profile-category-span-color: rgb(170, 134, 255);
+  --recipe-profile-name-bg: rgb(170, 134, 255);
+  --recipe-profile-name-color: white;
+  --recipe-profile-description-color: rgb(87, 87, 87);
+  --recipe-profile-link-a-bg: rgb(170, 134, 255);
+  --recipe-profile-link-a-color: white;
+  --recipe-profile-link-a-color-hover: rgb(170, 134, 255);
+  --recipe-profile-link-a-border-color-hover: rgb(170, 134, 255);
 }
 
 * {
@@ -538,6 +549,16 @@
   --footer-title-span: white;
   --footer-app-color: white;
   --footer-app-span: rgb(241, 232, 104);
+  --recipe-profile-bg: rgb(51, 51, 51);
+  --recipe-profile-category-color: rgb(241, 232, 104);
+  --recipe-profile-category-span-color: white;
+  --recipe-profile-name-bg: rgb(241, 232, 104);
+  --recipe-profile-name-color: white;
+  --recipe-profile-description-color: white;
+  --recipe-profile-link-a-bg: rgb(241, 232, 104);
+  --recipe-profile-link-a-color: white;
+  --recipe-profile-link-a-color-hover: rgb(241, 232, 104);
+  --recipe-profile-link-a-border-color-hover: rgb(241, 232, 104);
 }
 
 .black-bg {
@@ -558,7 +579,7 @@
 }
 
 .recipe-profile {
-  background-color: white;
+  background-color: var(--recipe-profile-bg);
   height: 50rem;
   width: 60rem;
   position: fixed;
@@ -566,19 +587,19 @@
 }
 
 .recipe-profile .recipe-category {
-  color: #575757;
+  color: var(--recipe-profile-category-color);
   margin: 2rem 2rem 0rem 2rem;
   font-family: 'Lexend', sans-serif;
 }
 
 .recipe-profile .recipe-category .category-span {
-  color: #aa86ff;
+  color: var(--recipe-profile-category-span-color);
 }
 
 .recipe-profile .recipe-name {
-  background-color: #aa86ff;
+  background-color: var(--recipe-profile-name-bg);
   height: 4rem;
-  color: white;
+  color: var(--recipe-profile-name-color);
   font-family: 'Lexend', sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -594,9 +615,15 @@
 }
 
 .recipe-profile .recipe-description {
-  color: #575757;
+  color: var(--recipe-profile-description-color);
   margin: 2rem 2rem 0rem 2rem;
   font-family: 'Lexend', sans-serif;
+}
+
+.recipe-profile .recipe-description .instructions-text {
+  overflow-y: scroll;
+  height: 25rem;
+  margin-right: .3rem;
 }
 
 .recipe-profile .recipe-link {
@@ -614,8 +641,8 @@
 .recipe-profile .recipe-link a {
   margin-top: 3rem;
   text-decoration: none;
-  background-color: #aa86ff;
-  color: white;
+  background-color: var(--recipe-profile-link-a-bg);
+  color: var(--recipe-profile-link-a-color);
   padding: 2rem;
   border-radius: 1rem;
   font-family: 'Lexend', sans-serif;
@@ -625,9 +652,9 @@
 }
 
 .recipe-profile .recipe-link a:hover {
-  color: #aa86ff;
+  color: var(--recipe-profile-link-a-color-hover);
   background-color: transparent;
-  border: 2px solid #aa86ff;
+  border: 2px solid var(--recipe-profile-link-a-border-color-hover);
   -webkit-transition: .2s;
   transition: .2s;
 }

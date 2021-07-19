@@ -12,25 +12,25 @@
 }
 
 .recipe-profile {
-    background-color: white;
+    background-color: var(--recipe-profile-bg);
     height: 50rem;
     width: 60rem;
     position: fixed;
     border-radius: 1rem;
 
     .recipe-category {
-        color: rgb(87, 87, 87);
+        color: var(--recipe-profile-category-color);
         margin: 2rem 2rem 0rem 2rem;
         font-family: 'Lexend', sans-serif;
         // font-weight: bold;
         .category-span {
-            color:rgb(170, 134, 255);
+            color: var(--recipe-profile-category-span-color);
         }
     }
     .recipe-name {
-        background-color: rgb(170, 134, 255);
+        background-color: var(--recipe-profile-name-bg);
         height: 4rem;
-        color: white;
+        color: var(--recipe-profile-name-color);
         font-family: 'Lexend', sans-serif;
         display: flex;
         justify-content: center;
@@ -40,9 +40,14 @@
 
     }
     .recipe-description {
-        color: rgb(87, 87, 87);
+        color: var(--recipe-profile-description-color);
         margin: 2rem 2rem 0rem 2rem;
         font-family: 'Lexend', sans-serif;
+        .instructions-text {
+            overflow-y: scroll;
+            height: 25rem;
+            margin-right: .3rem;
+        }
     }
 
     .recipe-link {
@@ -52,17 +57,17 @@
         a {
             margin-top: 3rem;
             text-decoration: none;
-            background-color: rgb(170, 134, 255);
-            color: white;
+            background-color: var(--recipe-profile-link-a-bg);
+            color: var(--recipe-profile-link-a-color);
             padding: 2rem;
             border-radius: 1rem;
             font-family: 'Lexend', sans-serif;
             transition: .2s;
             border: 2px solid transparent;
             &:hover {
-                color:rgb(170, 134, 255);
+                color: var(--recipe-profile-link-a-color-hover);
                 background-color: transparent;
-                border: 2px solid rgb(170, 134, 255);
+                border: 2px solid var(--recipe-profile-link-a-border-color-hover);
                 transition: .2s;
             }
         }
