@@ -106,4 +106,38 @@
         font-size: .8rem;
     }
 
+
+    //recipe profile
+    .black-bg .recipe-profile {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border-radius: 0em;
+    }
+
+    .black-bg .recipe-profile .recipe-category {
+        margin: 2em 2em 0em 2em;
+    }
+
+    .black-bg .recipe-profile .recipe-name {
+        height: 3em;
+        border-top-left-radius: 0em;
+        border-top-right-radius: 0em;
+    }
+
+    .black-bg .recipe-profile .recipe-description {
+        margin: 2em 2em 0em 2em;
+    }
+
+    .black-bg .recipe-profile .recipe-description .instructions-text {
+        height: 25em;
+        margin-right: .3em;
+    }
+
+    .black-bg .recipe-profile .recipe-link a {
+        margin-top: 3rem;
+        padding: 2rem;
+        border-radius: 1rem;
+        border: 2px solid transparent;
+    }
 }
