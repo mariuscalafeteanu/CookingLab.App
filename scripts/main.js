@@ -57,14 +57,9 @@ const addStyle = () => {
 }
 
 //showing recipe profile on click
-const showProfile = (e) => {
+const showProfile = e => {
 
     const recipeProfile = document.querySelector('.recipe-profile');
-
-    // const recipeName = document.querySelector('.recipe-name');
-    // const recipeDescription = document.querySelector('.recipe-description');
-    // const recipeCategory = document.querySelector('.recipe-category');
-
     const blackBg = document.querySelector('.black-bg');
     const selectedItem = e.target.innerHTML;
 
@@ -87,7 +82,12 @@ const showProfile = (e) => {
         .then(data => {
             blackBg.style.display = 'flex';
             recipeProfile.style.display = 'block';
-            resultsContainer.style.display = 'none';
+    
+            if (window.screen.width <= 375) {
+                recipeOutput.style.display = 'none';
+            } else {
+                recipeOutput.style.display = 'grid';
+            }
 
             blackBg.innerHTML += 
             `<div class="recipe-profile">
