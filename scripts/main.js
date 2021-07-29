@@ -77,6 +77,7 @@ const showProfile = (e) => {
         blackBg.addEventListener('click', () => {
             blackBg.style.display = 'none';
             recipeProfile.style.display = 'none';
+            resultsContainer.style.display = 'grid';
         });
 
         //fetching selected recipe to show details
@@ -86,6 +87,7 @@ const showProfile = (e) => {
         .then(data => {
             blackBg.style.display = 'flex';
             recipeProfile.style.display = 'block';
+            resultsContainer.style.display = 'none';
 
             blackBg.innerHTML += 
             `<div class="recipe-profile">

@@ -135,9 +135,16 @@
     }
 
     .black-bg .recipe-profile .recipe-link a {
-        margin-top: 3rem;
-        padding: 2rem;
-        border-radius: 1rem;
-        border: 2px solid transparent;
+        margin-top: 3em;
+        padding: 2em;
+        border-radius: 1em;
+        border: 0.125em solid transparent;
+    }
+}
+
+
+@media only screen and (max-height: 667px) {
+    .black-bg .recipe-profile .recipe-description .instructions-text {
+        height: 15em;
     }
 }
